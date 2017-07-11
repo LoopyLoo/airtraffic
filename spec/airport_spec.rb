@@ -23,7 +23,7 @@ describe 'myairport methods' do
 
 	context 'take off permission' do
 		it 'stops take off' do
-			expect(prevent_takeoff).to eq 'take off not allowed'
+			expect(take_off_allowed).to eq false
 		end
 
 		it 'checks the weather' do
