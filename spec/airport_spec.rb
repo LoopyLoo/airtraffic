@@ -1,34 +1,46 @@
 require 'airport'
+require 'Weather'
+require 'plane'
 	
-describe 'myairport methods' do 
+describe 'testing airport class' do 
 	
-
-		context 'Plane parked' do
-		it'adds to the airport list of landed planes' do
-		expect(add_to_airport_list).to eq 'big plane'
-		end
-	end
-
+	
 	context 'Instructing plane to land' do
 		it 'lands the plane' do
-		expect(instruct_to_land).to eq 'Landed'
+			Heathrow=Airport.new("Heathrow")
+			landing_plane=Plane.new("boing707")
+			Heathrow.instruct_to_land(landing_plane)
+			expect(Heathrow.return_planes).to eq 'Plane is boing707'
 		end
 	end
+
 
 	context 'Instructing plane to take off' do
 		it 'take off' do
-			expect(instruct_to_takeoff).to eq 'Take off'
+			Heathrow=Airport.new("Heathrow")
+			takingoff_plane=Plane.new("cesna")
+			Heathrow.instruct_to_takeoff(takingoff_plane)
+			expect(Heathrow.return_planes).to eq nil		
+		end
+	end
+
+		context 'Plane parked' do
+		it'adds to the airport list of landed planes' do
+		Heathrow=Airport.new("Heathrow")
+		added_plane=Plane.new("spitfire")
+		Heathrow.add_plane_to_list(added_plane)
+		expect(Heathrow.return_planes).to eq 'Plane is spitfire'
 		end
 	end
 
 	context 'take off permission' do
 		it 'stops take off' do
-			expect(take_off_allowed).to eq false
+			expect(Heathrow.take_off_allowed).to eq true
 		end
 
 		it 'checks the weather' do
-			
-			expect(todays_weather).to eq 'good day for flying'
+			today=Weather.new()
+			expect(today.todays_weather).to eq 1
 		end
 
 	end
