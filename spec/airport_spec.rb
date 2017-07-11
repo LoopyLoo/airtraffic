@@ -27,8 +27,8 @@ describe 'myairport methods' do
 		end
 
 		it 'checks the weather' do
-			weather="bad man"
-			expect(todays_weather).to eq 'bad man'
+			
+			expect(todays_weather).to eq 'good day for flying'
 		end
 
 	end

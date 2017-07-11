@@ -2,15 +2,15 @@
 
 
 def instruct_to_land
-	p 'Landed'
+	return confirm_landing if todays_weather!='stormy'
 end
 
 def instruct_to_takeoff
-	p 'Take off'
+	confirm_takeoff
 end
 
 def prevent_takeoff
-	p 'take off not allowed'
+	'take off not allowed'
 end
 
 def add_to_airport_list
@@ -19,5 +19,11 @@ def add_to_airport_list
 end
 
 def todays_weather
-	'bad man'
+	'good day for flying'
+end
+def confirm_landing
+	'Landed'
+end
+def confirm_takeoff
+	'Take off'
 end
