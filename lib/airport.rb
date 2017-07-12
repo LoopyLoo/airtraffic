@@ -14,11 +14,10 @@ class Airport
 		if landing_allowed and not airport_full  then
 
 			add_plane_to_list(plane)
-
 		 else
 		   'landing postponed'	
 		 end
-	end
+	 end
 
 	
 	def instruct_to_takeoff(plane)
@@ -61,13 +60,6 @@ class Airport
 
 	def airport_full
 		return false if @planes.size<= CAPACITY
-	end
-
-
-	def display()
-		puts "Name is ... #@airport_name"
-		puts "and the capacity is ... #{CAPACITY}"
-		puts "And the first plane is #{@planes[0]}"
 	end
  
 end 

@@ -5,7 +5,7 @@ require 'plane'
 describe 'testing airport class' do 
 	
 	
-	context 'Instructing plane to land' do
+	context 'Instructing the plane to land' do
 		it 'lands the plane' do
 			Heathrow=Airport.new("Heathrow")
 			landing_plane=Plane.new("boing707")
