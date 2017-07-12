@@ -40,7 +40,7 @@ describe 'testing airport class' do
 
 		it 'checks the weather' do
 			today=Weather.new()
-			expect(today.todays_weather).to eq 1
+			expect(today.todays_weather).to_not eq 0
 		end
 
 	end

@@ -1,5 +1,5 @@
-require 'Weather'
-require 'plane'
+require './lib/weather'
+require './lib/plane'
 
 class Airport
 	CAPACITY =50

@@ -1,24 +1,24 @@
 class Plane
 
-def initialize(plane_name)
+  def initialize(plane_name)
 	@name=plane_name
-end
+  end
 
-def take_off_instructions()
+  def take_off_instructions()
 	if  @flying
 		'plane already in the air '
 	else	
 		@flying=true
 	end
-end
+  end
 
-def landing_intructions()
+  def landing_intructions()
 	if  @flying
 		@flying=false	
 	else			
 		'plane already landed '
 	end
-end
+  end
 
 def name()
 	@name
