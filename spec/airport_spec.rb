@@ -2,7 +2,7 @@ require 'airport'
 require 'Weather'
 require 'plane'
 	
-describe 'testing airport class' do 
+describe 'testing the airport class' do 
 	
 	
 	context 'Instructing the plane to land' do
@@ -44,9 +44,6 @@ describe 'testing airport class' do
 		end
 
 	end
-
-
-
 
  end
 

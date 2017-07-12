@@ -26,6 +26,7 @@ class Airport
 		else
 				'take off not allowed'
 		end
+		
 	end
 
 
